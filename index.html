@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <style>
+      body {
+        background: black;
+        margin: 0;
+      }
+      .one-third {
+        float: left;
+        width: 35%;
+      }
+      .two-thirds {
+        float: left;
+        width: 65%;
+      }
+      .fancy-scale-image {
+        overflow: hidden;
+      }
+      #text1 {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        width: 80%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fancy-scale-image one-third">
+      <img src="./images/image1.jpg" class="center top" />
+      <img src="./images/text.png" class="center bottom no-scale" id="text1" />
+    </div>
+    <div class="fancy-scale-image two-thirds"><img src="./images/image2.jpg" class="right bottom" /></div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./fancyscale.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('.one-third, .two-thirds').fancyscale();
+      });
+    </script>
+  </body>
+</html>
